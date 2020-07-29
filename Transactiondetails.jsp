@@ -13,6 +13,10 @@
 
 session = request.getSession();
 String accountno = (String) session.getAttribute("accountno");
+if(accountno == null)
+{
+	response.sendRedirect("Loginpage.jsp");
+}
 
 out.println("ACCOUNT NO "+accountno);
 out.write("<br>");
