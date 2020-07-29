@@ -48,7 +48,7 @@
 	 
  int bal;
 
-	 session = request.getSession();
+	 
 	 String accountno =(String) session.getAttribute("accountno");
 	 
 	 
