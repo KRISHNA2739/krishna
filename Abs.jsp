@@ -15,6 +15,10 @@
 
 session = request.getSession();
 String accountno = (String) session.getAttribute("accountno");
+if(accountno == null)
+{
+	response.sendRedirect("Loginpage.jsp");
+}
 
 out.println("ACCOUNT NO "+accountno);
 String dbUrl = "jdbc:mysql://localhost:3306/demo";
