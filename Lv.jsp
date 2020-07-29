@@ -44,7 +44,7 @@ Connection myConn = DriverManager.getConnection(dbUrl, user, pass);
 if(status)
 {
 	String accountno =rs.getString("accountno");
-	session = request.getSession();
+	
 	session.setAttribute("accountno",accountno);
 	response.sendRedirect("Abs.jsp");
 	
