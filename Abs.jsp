@@ -13,12 +13,12 @@
 
 <%
 
-session = request.getSession();
-String accountno = (String) session.getAttribute("accountno");
-if(accountno == null)
+if( session.getAttribute("accountno") == null)
 {
 	response.sendRedirect("Loginpage.jsp");
 }
+String accountno = (String) session.getAttribute("accountno");
+
 
 out.println("ACCOUNT NO "+accountno);
 String dbUrl = "jdbc:mysql://localhost:3306/demo";
@@ -48,6 +48,11 @@ out.println(myRs.getString("balance") );
 <form action="Transactiondetails.jsp" method="post">
    
         <input type="submit" value="TRANSACTIONS" />
+</form>
+<form action="Lout.jsp" method="post">
+   
+        <input type="submit" value="LOGOUT" />
+        
 </form>
 
 
