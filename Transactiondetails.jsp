@@ -10,7 +10,7 @@
 <body>
 <h1>THE LAST FIVE TRANSACTION DETAILS</h1>
 <%
-
+response.setHeader("Cache-Control","no-cache,no-store,must-revalidate" );
 if( session.getAttribute("accountno") == null)
 {
 	response.sendRedirect("Loginpage.jsp");
