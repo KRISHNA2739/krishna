@@ -11,12 +11,12 @@
 <h1>THE LAST FIVE TRANSACTION DETAILS</h1>
 <%
 
-session = request.getSession();
-String accountno = (String) session.getAttribute("accountno");
-if(accountno == null)
+if( session.getAttribute("accountno") == null)
 {
 	response.sendRedirect("Loginpage.jsp");
 }
+String accountno = (String) session.getAttribute("accountno");
+
 
 out.println("ACCOUNT NO "+accountno);
 out.write("<br>");
@@ -49,11 +49,22 @@ out.write("<br>");
  myRs = myStmt.executeQuery("select * from accountbalance where accountno ="+accountno);
 
 
- myRs.next();
+ if (myRs.next())
+ {
  out.println("ACCOUNT BALANCE IS "+myRs.getInt("balance"));
- 
+ }
+ out.write("<br>");
 
-%>
+ 
+ %>
+ 
+ <form action="Lout.jsp" method="post">
+ 
+ <input type="submit" value="LOGOUT" />
+ 
+    </form>
+
+
 
 </body>
 </html>
