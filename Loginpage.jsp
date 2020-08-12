@@ -7,7 +7,7 @@
 <title>LOGIN PAGE</title>
 </head>
 <body>
-<form action="Lv.jsp" method="post">
+<form action="lv" method="post">
 		<table style="with: 50%">
  
 			<tr>
