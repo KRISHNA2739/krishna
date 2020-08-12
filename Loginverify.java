@@ -28,8 +28,7 @@ public class Loginverify extends HttpServlet {
 		if(username.isEmpty() || password.isEmpty() )
 		{
 			response.sendRedirect("Loginpage.jsp");
-			//RequestDispatcher req = request.getRequestDispatcher("Loginpage.jsp");
-			//req.include(request, response);
+			
 		}
 		else
 		{
@@ -45,7 +44,7 @@ public class Loginverify extends HttpServlet {
 		 myConn = DriverManager.getConnection(dbUrl, user, pass);
 
 
-			//PreparedStatement ps=con.prepareStatement("Select * from MAILCASTINGUSER where EMAILADD = ? and PASSWORD =?");
+			
 			 ps=myConn.prepareStatement("Select accountno from accountsecure where username = ? and password =?");
 
 			ps.setString(1,username);
