@@ -76,8 +76,6 @@ public class Loginverify extends HttpServlet {
 			session.setAttribute("accountno",accountno);
 			response.sendRedirect("Abs.jsp");
 			
-			//RequestDispatcher req = request.getRequestDispatcher("Abs.jsp");
-			//req.forward(request, response);
 		}
 		else
 		{
