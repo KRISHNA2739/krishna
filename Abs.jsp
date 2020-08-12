@@ -49,7 +49,7 @@ out.println(myRs.getString("balance") );
    
         <input type="submit" value="TRANSACTIONS" />
 </form>
-<form action="Lout.jsp" method="post">
+<form action="logout" method="post">
    
         <input type="submit" value="LOGOUT" />
         
