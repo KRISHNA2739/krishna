@@ -58,7 +58,7 @@ out.write("<br>");
  
  %>
  
- <form action="Lout.jsp" method="post">
+ <form action="logout" method="post">
  
  <input type="submit" value="LOGOUT" />
  
