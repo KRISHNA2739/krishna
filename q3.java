@@ -12,8 +12,9 @@ public class q3 {
 			if(n>0)
 			{
 				int m;
+				double s=0;
 			
-			int[] grades = new int[n];
+			int[] g = new int[n];
 			for(int i=0;i<n;i++)
 			{
 				System.out.println("enter the grade for student"+i+":");
@@ -23,14 +24,14 @@ public class q3 {
 					i--;
 					continue;
 				}
-				grades[i]=m;
+				g[i]=m;
 				
 			}
-			double sum=0;
-			for(int j=0;j<n;j++) {
-				sum=sum+grades[j];
+			
+			for(int i=0;i<n;i++) {
+				s=s+g[j];
 			}
-			System.out.println("the average is: "+sum/n);
+			System.out.println("the average is: "+s/n);
 		}
 		
 	}
